@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+</head>
+<body>
+<h1 id="city">Thành phố</h1>
+<h2><span id="nhietdo">20</span><sup>o</sup>C</h2>
+<h3>Áp suất: <span id="apsuat">1001</span></h3>
+<button type="button" onclick="hanoi('Hanoi')">Hanoi</button>
+<button type="button" onclick="hanoi('saigon')">TP HCM</button>
+<button type="button" onclick="hanoi('tokyo')">Tokyo</button>
+<button type="button" onclick="hanoi('bangkok')">Bangkok</button>
+<button type="button" onclick="hanoi('london')">London</button>
+<button type="button" onclick="hanoi('beijing')">Beijing</button>
+<button type="button" onclick="hanoi('alaska')">Alaska</button>
+<button type="button" onclick="hanoi('new york')">New York</button>
+<button type="button" onclick="hanoi('berlin')">Berlin</button>
+<script type="text/javascript">
+    function hanoi(city) {
+        // code o day luon
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+            // day la cho lay data ve
+            var data = JSON.parse(this.responseText);
+            var ct = data.name;
+            var h1city = document.getElementById("city");
+            h1city.innerText = ct;
+
+            var tmp = data.main.temp;
+            var nhietdo = document.getElementById("nhietdo");
+            nhietdo.innerText = tmp;
+
+            var pres = data.main.pressure;
+            var asuat = document.getElementById("apsuat");
+            asuat.innerText = pres;
+        };
+        var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
+        xhttp.open("GET",url,true);
+        xhttp.send();
+    }
+</script>
+</body>
+</html>
