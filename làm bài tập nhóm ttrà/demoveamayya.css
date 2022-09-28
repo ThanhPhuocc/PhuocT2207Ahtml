@@ -1,0 +1,38 @@
+* {
+    box-sizing: inherit;<!-- note -->
+}
+.dilo {
+    font-size: .8em;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #db9457;
+}
+.daba{
+    text-align: center;
+    font-size: 260%;
+}
+.baybal{
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+    width: 2px;
+}    background-color: #db9457;
+}
+.thetten{
+    font-family: Playfair-Display;
+    font-weight: inherit;
+    font-size: 1.2em;
+}
+.the3tra{
+    text-align: center;
+}
+.select{
+    color: #db9457;
+}
+.thetien{
+    font-weight: bold;
+    font-size: 0.87em;
+}
+.select{
+
+}
