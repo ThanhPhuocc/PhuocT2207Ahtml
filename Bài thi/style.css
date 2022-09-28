@@ -1,0 +1,32 @@
+body{
+    background: green;
+}
+.nav-tabs{
+    width: 100%;
+    border:none !important;
+}
+
+.nav-tabs .nav-item{
+    width: 50%;
+}
+
+.nav-item button{
+    border: none;
+    background: #ddd !important;
+    border-radius: 0 !important;
+    width: 100%;
+}
+.nav-link.active{
+    background: white !important;
+    border: none !important;
+}
+.login-form input{
+    border-bottom: 1px solid #ddd;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+.login-form button{
+    border-radius: 0;
+}
